@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+* {padding:0; margin:0; box-sizing:border-box;}
+
+html {scroll-behavior:smooth;}
+html, body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 10pt;
+    line-height: 190%;
+}
+h2, h3 {
+    font-family: 'Gugi', cursive;
+}
+
+#layout {
+    max-width:500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+a {
+    text-decoration:none;
+    color:black;
+}
+img {
+    max-width:100%;
+}
+:root {
+    --maincolor:#499b00; --subcolor:#e2ef97;
+}
+
+/***********************header*************************/
+header {
+    background: var(--maincolor); 
+    color:white; 
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    position: relative;
+}
+header>button {
+    background: transparent; 
+    color:white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: auto;
+    left: 20px;
+    padding: 5px;
+}
+header>h1 {
+    text-align: center;
+}
+
+/***********************nav*************************/
+#layout>nav {
+    position: absolute; 
+    width: 100%;
+    left: -103%; 
+    top: auto; 
+    background: white; 
+    height: 80vh; 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); 
+    transition: left 0.5s;
+}
+#layout ul {
+    list-style: none inside url("../images/bullet.png");
+}
+#layout ul>li {
+    border-bottom: 1px solid #ddd; 
+    padding: 15px 30px;
+}
+
+/***********************main*************************/
+main {
+    padding: 0px 15px;
+}
+main>h2	{
+    padding-top: 30px; 
+    padding-bottom: 10px;
+}
+main>p	{
+    text-align: justify;
+}
+main>p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold; 
+    color: var(--maincolor);
+}
+main>p>img	{
+    width: 100px;
+}
+main>p:first-of-type>img {
+    float: right; 
+    margin-left: 10px;
+    margin-top: 5px;
+}
+main>ol	{
+    text-align: right;
+    color: var(--maincolor); 
+    list-style-position: inside; 
+    margin-bottom: 10px; 
+    background:url("../images/bg.jpg") no-repeat left bottom / contain;
+}
+main>figure {margin-top:20px;}
+main>figure>img {width:95%; margin:auto; display:block; border-radius:20px; box-shadow:2px 2px 5px black;}
+main>figure>figcaption {font-size:0.9rem; text-align:center; padding-top:5px;}
+main>p:last-of-type>img  {
+    float: left; 
+    margin-right: 10px;
+}
+aside	{max-width:500px; margin:auto;padding:15px; background: var(--subcolor); margin-top:20px;}
+aside>h2 {margin-top: 15px;}
+aside>h2::before { content: "\2618"; color: var(--maincolor); margin-right: 5px;}
+
+footer { margin:auto; padding:15px; background:#ddd; text-align: center;}
+
+
